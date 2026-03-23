@@ -347,7 +347,7 @@ const CARDS = [
       fr: "Projet détudes OpenGL, le but était de créer notre propre moteur de jeux vidéos en une semaine en équipe.",
       en: "An OpenGL studies project, the goal was to create our own video games engine in one week with small teams to do it."
     },
-    img:    "",
+    img:    "assets/MAMMenu.png",
     video:  "assets/test.mp4",
     github: "https://github.com/Prog1-2023/ComUnity",
     tech:   ["cpp"],

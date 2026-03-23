@@ -140,8 +140,6 @@ function showDetail(c) {
   const moreHtml = det
     ? `<button class="more-btn" onclick="openDet(${sel})">${UI[lang].moreBtn}</button>`
     : '';
-  const hintTxt  = hasVid ? UI[lang].playHint : '';
-
   d.innerHTML = `
     <div class="dcard" id="dcr">
       <div class="cframe${c.img ? ' has-img' : ''}">
@@ -150,10 +148,9 @@ function showDetail(c) {
             <div class="cf-nm">${name}</div>
             <div class="cf-st">${stars}</div>
           </div>
-          <div class="cf-art" id="cfart">
+          <div class="cf-art${hasVid ? ' play' : ''}" id="cfart">
             <img src="${img}" alt="${name}"/>
             ${vidHtml}
-            ${hasVid ? '<div class="cf-pb">▶</div>' : ''}
           </div>
           <div class="cf-tp">${escHtml(c.type)}</div>
           <div class="cf-lr">${escHtml(desc)}</div>
@@ -166,12 +163,13 @@ function showDetail(c) {
     </div>
     ${ghHtml}
     ${moreHtml}
-    <div class="d-hint">${hintTxt}</div>`;
+    <div class="d-hint"></div>`;
 
-  // Vidéo cliquable
+  // Lancer la vidéo automatiquement si elle existe
   const art = document.getElementById('cfart');
   if (art && hasVid) {
-    art.addEventListener('click', e => { e.stopPropagation(); toggleVid(art); });
+    const v = art.querySelector('video');
+    if (v) v.play().catch(() => {}); // catch si le navigateur bloque l'autoplay
   }
 
   // Effet tilt 3D sur la carte
