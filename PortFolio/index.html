@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Raphael Bouvier</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<canvas id="bgc"></canvas>
+<div id="flash"></div>
+
+<!-- ══════════════ INTRO ══════════════ -->
+<div id="intro">
+  <div class="rings">
+    <div class="ring"></div><div class="ring"></div>
+    <div class="ring"></div><div class="ring"></div>
+  </div>
+
+  <svg class="m-eye" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="eG" cx="50%" cy="50%" r="50%">
+        <stop offset="0%"   stop-color="#f0c060" stop-opacity=".25"/>
+        <stop offset="100%" stop-color="#c9922a" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="pG" cx="40%" cy="35%" r="60%">
+        <stop offset="0%"   stop-color="#c9922a"/>
+        <stop offset="100%" stop-color="#5a3000"/>
+      </radialGradient>
+      <filter id="gl">
+        <feGaussianBlur stdDeviation="3" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    <circle cx="100" cy="100" r="96" fill="url(#eG)"/>
+    <circle cx="100" cy="100" r="88" stroke="#c9922a" stroke-width="1.5" fill="none" filter="url(#gl)"/>
+    <polygon points="100,18 183,162 17,162" stroke="#c9922a" stroke-width="2.5" fill="none" filter="url(#gl)"/>
+    <circle cx="100" cy="18"  r="3" fill="#f0c060"/>
+    <circle cx="183" cy="162" r="3" fill="#f0c060"/>
+    <circle cx="17"  cy="162" r="3" fill="#f0c060"/>
+    <ellipse cx="100" cy="115" rx="30" ry="19" stroke="#c9922a" stroke-width="2" fill="#0e0a02" filter="url(#gl)"/>
+    <circle cx="100" cy="115" r="11" fill="url(#pG)"/>
+    <circle cx="100" cy="115" r="5.5" fill="#0e0a02"/>
+    <circle cx="104" cy="111" r="2.5" fill="#f0c060" opacity=".8"/>
+    <line x1="100" y1="10"  x2="100" y2="28"  stroke="#f0c06077" stroke-width="1.5"/>
+    <line x1="100" y1="172" x2="100" y2="190" stroke="#f0c06077" stroke-width="1.5"/>
+    <line x1="10"  y1="100" x2="28"  y2="100" stroke="#f0c06077" stroke-width="1.5"/>
+    <line x1="172" y1="100" x2="190" y2="100" stroke="#f0c06077" stroke-width="1.5"/>
+  </svg>
+
+  <div class="i-title">Raphael B</div>
+  <div class="i-sub">Gameplay Programmer · Junior</div>
+  <button id="enter-btn" onclick="enterDuel()">✦ ENTER ✦</button>
+</div>
+
+<!-- ══════════════ BOUTON ABOUT ══════════════ -->
+<button id="about-btn" title="About Me" onclick="document.getElementById('about-ov').classList.add('open')">
+  <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <defs>
+      <radialGradient id="pg2" cx="40%" cy="35%" r="60%">
+        <stop offset="0%"   stop-color="#f0c060"/>
+        <stop offset="100%" stop-color="#7a4800"/>
+      </radialGradient>
+    </defs>
+    <polygon points="30,5 55,52 5,52" fill="url(#pg2)" stroke="#f0c06088" stroke-width="1.5"/>
+    <ellipse cx="30" cy="38" rx="10" ry="6" stroke="#1a0800" stroke-width="1.5" fill="#0e0a00"/>
+    <circle cx="30" cy="38" r="4" fill="#c9922a"/>
+    <circle cx="30" cy="38" r="2" fill="#0e0a00"/>
+    <circle cx="32" cy="36" r="1" fill="#f0c060" opacity=".9"/>
+    <line x1="30" y1="5"  x2="30" y2="14" stroke="#f0c06055" stroke-width="1"/>
+    <line x1="55" y1="52" x2="47" y2="46" stroke="#f0c06055" stroke-width="1"/>
+    <line x1="5"  y1="52" x2="13" y2="46" stroke="#f0c06055" stroke-width="1"/>
+  </svg>
+</button>
+
+<!-- ══════════════ INTERRUPTEUR LANGUE ══════════════ -->
+<div id="lang-toggle">
+  <div class="lang-wrap">
+    <span class="lang-rune">✦</span>
+    <div class="lang-pill" id="lang-pill"></div>
+    <span class="lang-label active"   id="lbl-fr" onclick="setLang('fr')">FR</span>
+    <span class="lang-label inactive" id="lbl-en" onclick="setLang('en')">EN</span>
+    <span class="lang-rune">✦</span>
+  </div>
+</div>
+
+<!-- ══════════════ OVERLAY ABOUT ══════════════ -->
+<div id="about-ov" onclick="if(event.target===this)this.classList.remove('open')">
+  <div id="about-box">
+    <h2>⟁ Duelist</h2>
+    <div class="a-name">Bouvier Raphael</div>
+    <div class="a-role">Gameplay Programmer · Junior</div>
+    <div class="a-bio" id="about-bio-text">
+      Passionné par la création de mécaniques de jeu et l'expérience joueur.
+      Je développe en C++ / C# sur Unreal Engine &amp; Unity.
+      Ce portfolio présente mes projets — chaque carte est une mécanique ou un projet réalisé.
+      Sélectionne une carte pour en apprendre davantage.
+    </div>
+    <div class="a-links">
+      <a class="a-link" href="https://github.com/RaphBv" target="_blank" rel="noopener">⟁ GitHub</a>
+      <a class="a-link" href="https://www.linkedin.com/in/raphael-bouvier/" target="_blank" rel="noopener">in LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ APPLICATION ══════════════ -->
+<div id="app">
+  <div id="left">
+    <div id="dust-wrap"></div>
+    <div id="ph">
+      <div class="ph-g">⬡</div>
+      <p id="ph-text">Sélectionnez une carte<br/>pour révéler son pouvoir…</p>
+    </div>
+    <div id="cd"></div>
+  </div>
+
+  <div id="right">
+    <div class="phdr">
+      <div class="ptitle" id="deck-title">Mon Deck</div>
+      <div class="pcnt"   id="cnt"></div>
+    </div>
+    <div id="grid"></div>
+  </div>
+</div>
+
+<!-- ══════════════ MODALE DÉTAILS ══════════════ -->
+<div id="det-ov" onclick="if(event.target===this)closeDet()">
+  <div id="det-box">
+    <div id="det-head">
+      <div id="det-title">⟁ Détails du Projet</div>
+      <button id="det-close" onclick="closeDet()" title="Fermer">✕</button>
+    </div>
+    <div id="det-content"></div>
+  </div>
+</div>
+
+<!-- ══════════════ SCRIPTS ══════════════
+     Ordre important :
+     1. cards.js  → données (CARDS, UI, TECH)
+     2. canvas.js → animation fond (introActive)
+     3. lang.js   → switch langue (dépend de UI, renderGrid, showDetail, sel)
+     4. app.js    → logique principale (définit renderGrid, showDetail, sel…)
+══════════════════════════════════════ -->
+<script src="js/cards.js"></script>
+<script src="js/canvas.js"></script>
+<script src="js/app.js"></script>
+<script src="js/lang.js"></script>
+
+</body>
+</html>
