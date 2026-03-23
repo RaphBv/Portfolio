@@ -871,41 +871,47 @@ const CARDS = [
     def:    "3000",
     details: {
       fr: `
-        <p>Jouez dans un donjon et récupérez la clé afin d'en explorer encore plus, vous pouvez également créer votre propre donjon.</p>
+        <p>Développement d’un moteur de jeu basique “ComUnity”, inspiré des principes d’Unity.</p>
         <h3>🎯 Ce que j'ai développé</h3>
         <ul>
-          <li>Implémentation de basic lighting (ambient, diffuse, specular)</li>
-          <li>Implémentation des différentes lights que nous pouvons placer sur notre map</li>
-          <li>Gestion des collisions et interactions entre le joueur et l’environnement</li>
-          <li>Intégration des animations des pièges via SFML</li>
+          <li>Développement d’un système d’éclairage (lumière directionnelle, ponctuelle, etc.)</li>
+          <li>Ajout de lumières dynamiques positionnables dans la scène</li>
+          <li>Gestion des interactions entre les lumières et les objets (ombrage, intensité, atténuation)</li>
         </ul>
         <h3>📸 Images</h3>
+        <img src="assets/ComUnityMainMenu.png" alt="Images"/>
         <img src="assets/ComUnityLight.png" alt="Images"/>
+        <img src="assets/ComUnityConsole.png" alt="Images"/>
+        <img src="assets/ComUnityCreateClass.png" alt="Images"/>
+        <img src="assets/ComUnityEditorPreferences.png" alt="Images"/>
+        <img src="assets/ComUnityMeshManager.png" alt="Images"/>
+        <img src="assets/ComUnityPanels.png" alt="Images"/>
         <h3>🔧 Difficultés rencontrées</h3>
         <ul>
-          <li>Gestion précise des collisions et des rebonds contre les murs pour obtenir un gameplay cohérent et satisfaisant</li>
-          <li>Synchronisation des animations de pièges avec leur logique de gameplay (timing, activation)</li>
-          <li>Implémentation de comportements variés pour les pièges tout en gardant un système maintenable</li>
-          <li>Contraintes techniques liées à SFML pour la gestion des animations et du rendu</li>
+          <li>Compréhension et implémentation des shaders (GLSL) pour gérer correctement le rendu et l’éclairage</li>
+          <li>Gestion des calculs d’éclairage (normales, directions, atténuation) pour obtenir un rendu réaliste</li>
         </ul>
       `,
       en: `
-        <p>Play in a dungeon and retrieve the key to explore even more, you can also create your own dungeon.</p>
+        <p>Development of a basic game engine called “ComUnity”, inspired by Unity’s core principles.</p>
         <h3>🎯 What I developed</h3>
         <ul>
-          <li>Implementation of various trap types with distinct behaviors</li>
-          <li>Development of a wall-bounce system based on gameplay physics</li>
-          <li>Handling of collisions and interactions between the player and the environment</li>
-          <li>Integration of trap animations using SFML</li>
+          <li>Development of a lighting system (directional light, point light, etc.)</li>
+          <li>Integration of dynamic lights that can be placed within the scene</li>
+          <li>Handling interactions between lights and objects (shading, intensity, attenuation)</li>
         </ul>
         <h3>📸 Images</h3>
+        <img src="assets/ComUnityMainMenu.png" alt="Images"/>
         <img src="assets/ComUnityLight.png" alt="Images"/>
+        <img src="assets/ComUnityConsole.png" alt="Images"/>
+        <img src="assets/ComUnityCreateClass.png" alt="Images"/>
+        <img src="assets/ComUnityEditorPreferences.png" alt="Images"/>
+        <img src="assets/ComUnityMeshManager.png" alt="Images"/>
+        <img src="assets/ComUnityPanels.png" alt="Images"/>
         <h3>🔧 Challenges faced</h3>
         <ul>
-          <li>Accurate collision handling and wall-bounce behavior to achieve consistent and satisfying gameplay</li>
-          <li>Synchronization between trap animations and gameplay logic (timing and activation)</li>
-          <li>Implementation of diverse trap behaviors while keeping the system maintainable</li>
-          <li>Technical constraints related to SFML for animation and rendering</li>
+          <li>Understanding and implementing shaders (GLSL) to properly handle rendering and lighting</li>
+          <li>Managing lighting calculations (normals, directions, attenuation) to achieve realistic results</li>
         </ul>
       `
     }
@@ -920,8 +926,8 @@ const CARDS = [
       fr: "Projet détudes OpenGL, le but était de créer notre propre moteur de jeux vidéos en une semaine en équipe.",
       en: "An OpenGL studies project, the goal was to create our own video games engine in one week with small teams to do it. "
     },
-    img:    "assets/ComUnityMainMenu.png",
-    video:  "",
+    img:    "",
+    video:  "assets/test.mp4",
     github: "https://github.com/Prog1-2023/ComUnity",
     tech:   ["cpp"],
     atk:    "3000",
