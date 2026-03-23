@@ -151,6 +151,7 @@ function showDetail(c) {
           <div class="cf-art${hasVid ? ' play' : ''}" id="cfart">
             <img src="${img}" alt="${name}"/>
             ${vidHtml}
+            ${hasVid ? '<div class="vid-overlay" id="vid-overlay"></div><div class="vid-pause-icon" id="vid-pause-icon">&#9646;&#9646;</div><button class="vid-fs-btn" id="vid-fs-btn" title="Plein écran">&#x26F6;</button>' : ''}
           </div>
           <div class="cf-tp">${escHtml(c.type)}</div>
           <div class="cf-lr">${escHtml(desc)}</div>
@@ -165,11 +166,49 @@ function showDetail(c) {
     ${moreHtml}
     <div class="d-hint"></div>`;
 
-  // Lancer la vidéo automatiquement si elle existe
+  // Lancer la vidéo + brancher les contrôles
   const art = document.getElementById('cfart');
   if (art && hasVid) {
-    const v = art.querySelector('video');
-    if (v) v.play().catch(() => {}); // catch si le navigateur bloque l'autoplay
+    const v       = art.querySelector('video');
+    const overlay = document.getElementById('vid-overlay');
+    const icon    = document.getElementById('vid-pause-icon');
+    const fsBtn   = document.getElementById('vid-fs-btn');
+
+    if (v) {
+      v.play().catch(() => {});
+
+      // Clic sur l'overlay → pause / reprise
+      overlay.addEventListener('click', e => {
+        e.stopPropagation();
+        if (v.paused) {
+          v.play();
+          icon.innerHTML = '&#9646;&#9646;';
+          icon.classList.remove('show');
+        } else {
+          v.pause();
+          icon.innerHTML = '&#9646;&#9646;';
+          icon.classList.add('show');
+        }
+      });
+    }
+
+    // Bouton plein écran
+    if (fsBtn) {
+      fsBtn.addEventListener('click', e => {
+        e.stopPropagation();
+        if (!document.fullscreenElement) {
+          (v || art).requestFullscreen().catch(() => {});
+          fsBtn.innerHTML = '&#x26F6;';
+          fsBtn.title = 'Quitter le plein écran';
+        } else {
+          document.exitFullscreen();
+          fsBtn.title = 'Plein écran';
+        }
+      });
+      document.addEventListener('fullscreenchange', () => {
+        fsBtn.innerHTML = document.fullscreenElement ? '&#x2715;' : '&#x26F6;';
+      }, { once: true });
+    }
   }
 
   // Effet tilt 3D sur la carte
