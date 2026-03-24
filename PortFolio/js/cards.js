@@ -6,6 +6,74 @@
 const CARDS = [
 
   {
+    name:   "Sun's Arrival",
+    type:   "[Gameplay Programmer]",
+    stars:  8,
+    desc: {
+      fr: "Jeu d'horreur inspiré de Five Nights at Freddy's par Scott Cawthon.",
+      en: "Horror game inspired by Five Nights at Freddy's by Scott Cawthon."
+    },
+    img:    "assets/SunMainMenu.png",
+    video:  "",
+    github: "https://github.com/UltiRed8/Sun-s-Arrival",
+    tech:   ["unreal","blueprint"],
+    atk:    "3500",
+    def:    "3500",
+    details: {
+      fr: `
+        <p>Un projet qui de base était un exercice de Objectif3D, mais nous avons décidé de le continuer</p>
+        <h3>🎯 Ce que j'ai développé</h3>
+        <ul>
+          <li>Implémentation des 3C (Character, Camera, Controls), avec gestion des caméras en vue 1ère et 3ème personne</li>
+          <li>Ajout d’un système de variation du FOV lors du sprint pour améliorer le game feel</li>
+          <li>Développement d’une IA ennemie capable de patrouiller, ouvrir des portes et poursuivre les joueurs</li>
+          <li>Implémentation de mécaniques de furtivité (casiers pour se cacher)</li>
+          <li>Création d’un mini-jeu interactif (mécanique de pression)</li>
+          <li>Intégration des animations du joueur et de l’IA</li>
+        </ul>
+        <h3>📸 Images</h3>
+        <img src="assets/SunMainMenu.png" alt="Images"/>
+        <img src="assets/SunLobby.png" alt="Images"/>
+        <img src="assets/SunMainOffice.png" alt="Images"/>
+        <img src="assets/SunReactorRoom.png" alt="Images"/>
+        <img src="assets/SunWarehouse.png" alt="Images"/>
+        <h3>🔧 Difficultés rencontrées</h3>
+        <ul>
+          <li>Adaptation des systèmes gameplay (IA, interactions, animations) au contexte multijoueur</li>
+          <li>Synchronisation des états (joueurs, IA, portes, cachettes) entre les différents clients</li>
+          <li>Gestion cohérente des transitions de caméra (1ère / 3ème personne) en réseau</li>
+          <li>Maintien d’un game feel fluide (FOV, déplacements) malgré les contraintes du multijoueur</li>
+        </ul>
+      `,
+      en: `
+        <p>A project started as an exercise from Objectif3D but quickly became a project we continued.</p>
+        <h3>🎯 What I developed</h3>
+        <ul>
+          <li>Implementation of the 3Cs (Character, Camera, Controls), including first-person and third-person camera systems</li>
+          <li>Implementation of dynamic FOV changes during sprint to enhance game feel</li>
+          <li>Development of an enemy AI capable of patrolling, opening doors, and chasing players</li>
+          <li>Implementation of stealth mechanics (lockers to hide)</li>
+          <li>Creation of an interactive mini-game (pressure-based mechanic)</li>
+          <li>Integration of player and AI animations</li>
+        </ul>
+        <h3>📸 Images</h3>
+        <img src="assets/SunMainMenu.png" alt="Images"/>
+        <img src="assets/SunLobby.png" alt="Images"/>
+        <img src="assets/SunMainOffice.png" alt="Images"/>
+        <img src="assets/SunReactorRoom.png" alt="Images"/>
+        <img src="assets/SunWarehouse.png" alt="Images"/>
+        <h3>🔧 Challenges faced</h3>
+        <ul>
+          <li>Adapting gameplay systems (AI, interactions, animations) to a multiplayer environment</li>
+          <li>Synchronizing states (players, AI, doors, hiding spots) across clients</li>
+          <li>Handling camera transitions (first-person / third-person) in a networked context</li>
+          <li>Maintaining smooth and responsive game feel (FOV, movement) despite multiplayer constraints</li>
+        </ul>
+      `
+    }
+  },
+
+  {
     name:   "Antastic Night",
     type:   "[Gameplay Programmer / GPE]",
     stars:  6,
