@@ -31,6 +31,7 @@ const CARDS = [
           <li>Mise en place du mode écran partagé (split-screen)</li>
         </ul>
         <h3>📸 Images</h3>
+        <img src="assets/OverdoseMainMenu.png" alt="Images"/>
         <img src="assets/OverdoseInGame.png" alt="Images"/>
         <img src="assets/OverdosePlayMenu.png" alt="Images"/>
         <h3>🔧 Difficultés rencontrées</h3>
@@ -51,6 +52,7 @@ const CARDS = [
           <li>Implementation of split-screen mode</li>
         </ul>
         <h3>📸 Images</h3>
+        <img src="assets/OverdoseMainMenu.png" alt="Images"/>
         <img src="assets/OverdoseInGame.png" alt="Images"/>
         <img src="assets/OverdosePlayMenu.png" alt="Images"/>
         <h3>🔧 Challenges faced</h3>
@@ -90,6 +92,7 @@ const CARDS = [
           <li>Implémentation des fonctionnalités de zoom et dézoom sur la carte</li>
         </ul>
         <h3>📸 Images</h3>
+        <img src="assets/GeoMenu.png" alt="Images"/>
         <img src="assets/GeoInGame.png" alt="Images"/>
         <h3>🔧 Difficultés rencontrées</h3>
         <ul>
@@ -111,6 +114,7 @@ const CARDS = [
           <li>Implementation of zoom in/out functionality on the map</li>
         </ul>
         <h3>📸 Images</h3>
+        <img src="assets/GeoMenu.png" alt="Images"/>
         <img src="assets/GeoInGame.png" alt="Images"/>
         <h3>🔧 Challenges faced</h3>
         <ul>
@@ -148,6 +152,7 @@ const CARDS = [
           <li>Intégration des animations des pièges via SFML</li>
         </ul>
         <h3>📸 Images</h3>
+        <img src="assets/KOTMainMenu.png" alt="Images"/>
         <img src="assets/KOTInGame.png" alt="Images"/>
         <h3>🔧 Difficultés rencontrées</h3>
         <ul>
@@ -167,6 +172,7 @@ const CARDS = [
           <li>Integration of trap animations using SFML</li>
         </ul>
         <h3>📸 Images</h3>
+        <img src="assets/KOTMainMenu.png" alt="Images"/>
         <img src="assets/KOTInGame.png" alt="Images"/>
         <h3>🔧 Challenges faced</h3>
         <ul>
@@ -252,7 +258,7 @@ const CARDS = [
     img:    "assets/RWMenu.png",
     video:  "",
     github: "https://github.com/RaphBv/Global-GameJam-Robing-William",
-    tech:   ["unreal","cpp"],
+    tech:   ["unreal","blueprint"],
     atk:    "1200",
     def:    "1200",
     details: {
@@ -302,7 +308,7 @@ const CARDS = [
     img:    "assets/MAMMenu.png",
     video:  "",
     github: "https://github.com/RaphBv/GameJam-MAM",
-    tech:   ["unreal","cpp"],
+    tech:   ["unreal","blueprint"],
     atk:    "1200",
     def:    "1200",
     details: {
@@ -340,6 +346,116 @@ const CARDS = [
   },
 
   {
+    name:   "Survival Game",
+    type:   "[Gameplay Programmer]",
+    stars:  6,
+    desc: {
+      fr: "Projet personnel de jeu de survie.",
+      en: "Personal survival game project."
+    },
+    img:    "assets/SMap.png",
+    video:  "",
+    github: "https://github.com/RaphBv/Survival",
+    tech:   ["unreal","blueprint"],
+    atk:    "2200",
+    def:    "2200",
+    details: {
+      fr: `
+        <p>Développement d'un jeu de survie.</p>
+        <h3>🎯 Ce que j'ai développé</h3>
+        <ul>
+          <li>Implémentation d’un système d’inventaire, de collecte de ressources et de construction</li>
+          <li>Mise en place d’un cycle jour/nuit impactant le gameplay</li>
+          <li>Ajout de mécaniques d’interaction (sommeil, visualisation de l’équipement du joueur)</li>
+          <li>Implémentation d’une IA ennemie capable de patrouiller et d’attaquer</li>
+        </ul>
+        <h3>📸 Images</h3>
+        <img src="assets/SMap.png" alt="Images"/>
+        <img src="assets/SInGame.png" alt="Images"/>
+        <h3>🔧 Difficultés rencontrées</h3>
+        <ul>
+          <li>Gestion de systèmes interconnectés (inventaire, construction, IA) tout en maintenant une architecture cohérente</li>
+        </ul>
+      `,
+      en: `
+        <p>Basic survival game.</p>
+        <h3>🎯 What I developed</h3>
+        <ul>
+          <li>Implementation of inventory, resource gathering, and building systems</li>
+          <li>Implementation of a day/night cycle impacting gameplay</li>
+          <li>Addition of interaction mechanics (sleeping, character equipment visualization)</li>
+          <li>Implementation of enemy AI capable of patrolling and attacking</li>
+        </ul>
+        <h3>📸 Images</h3>
+        <img src="assets/SMap.png" alt="Images"/>
+        <img src="assets/SInGame.png" alt="Images"/>
+        <h3>🔧 Challenges faced</h3>
+        <ul>
+            <li>Managing interconnected systems (inventory, building, AI) while maintaining a coherent architecture</li>
+        </ul>
+        
+      `
+    }
+  },
+
+  {
+    name:   "Rocket Boost",
+    type:   "[Gameplay Programmer]",
+    stars:  4,
+    desc: {
+      fr: "Projet personnel sur Unity.",
+      en: "Personal Unity game project."
+    },
+    img:    "assets/RocketInGame.png",
+    video:  "",
+    github: "https://github.com/RaphBv/RocketBoost",
+    tech:   ["unity", "csharp"],
+    atk:    "1400",
+    def:    "1400",
+    details: {
+      fr: `
+        <p>Projet personnel sur Unity avec un vaisseau en 2.5D .</p>
+        <h3>🎯 Ce que j'ai développé</h3>
+        <ul>
+          <li>Implémentation d’un système de déplacement basé sur la physique (propulsion dépendante de la rotation du vaisseau)</li>
+          <li>Création de pièges avec interactions gameplay</li>
+          <li>Mise en place de la boucle de jeu principale</li>
+          <li>Transition automatique entre les niveaux à l’arrivée</li>
+        </ul>
+        <h3>📸 Images</h3>
+        <img src="assets/RocketInGame.png" alt="Images"/>
+        <h3>🔧 Difficultés rencontrées</h3>
+        <ul>
+          <li>Gestion d’un système de mouvement physique précis et contrôlable par le joueur</li>
+          <li>Synchronisation entre rotation et direction de propulsion</li>
+          <li>Équilibrage du gameplay pour garantir des sensations de contrôle fluides</li>
+          <li>Gestion des transitions de niveau sans casser le rythme de jeu</li>
+        </ul>
+      `,
+      en: `
+        <p>A personal project in Unity with a ship 2.5D.</p>
+        <h3>🎯 What I developed</h3>
+        <ul>
+          <li>Implementation of a physics-based movement system (thrust driven by the ship’s rotation)</li>
+          <li>Creation of traps with gameplay interactions</li>
+          <li>Implementation of the main game loop</li>
+          <li>Level transitions upon reaching the goal</li>
+        </ul>
+        <h3>📸 Images</h3>
+        <img src="assets/RocketInGame.png" alt="Images"/>
+        <h3>🔧 Challenges faced</h3>
+        <ul>
+          <li>Handling precise and controllable physics-based movement</li>
+          <li>Synchronizing rotation with propulsion direction</li>
+          <li>Balancing gameplay to ensure smooth and responsive controls</li>
+          <li>Managing level transitions without breaking gameplay flow</li>
+        </ul>
+        
+      `
+    }
+  },
+
+  {
     name:   "TEST",
     type:   "[OpenGL/Ligths]",
     stars:  7,
@@ -350,7 +466,7 @@ const CARDS = [
     img:    "assets/MAMMenu.png",
     video:  "assets/test.mp4",
     github: "https://github.com/Prog1-2023/ComUnity",
-    tech:   ["cpp"],
+    tech:   ["cpp", "blueprint"],
     atk:    "3000",
     def:    "3000",
     details: {
@@ -441,4 +557,5 @@ const TECH = {
   lua:    { l:"Lua",     c:"#7fdbff", s:`<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4 12H8v-2h8v2zm0-4H8V8h8v2z"/></svg>` },
   godot:  { l:"Godot",   c:"#478cbf", s:`<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 2a8 8 0 110 16A8 8 0 0112 4zm-3 5v6h2v-2h2v2h2V9H9zm2 2h2v2h-2v-2z"/></svg>` },
   blender:{ l:"Blender", c:"#f5792a", s:`<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3 14c-.83.63-1.88 1-3 1a5 5 0 010-10c1.12 0 2.17.37 3 1l-1.5 1.5C13 9.2 12.5 9 12 9a3 3 0 000 6c.5 0 1-.2 1.5-.5L15 16z"/></svg>` },
+  blueprint: { l:"Blueprint",  c:"#3bc7ff", s:`<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 10H9v-1c0-1.33 2.67-2 3-2s3 .67 3 2v1z"/></svg>` },
 };
