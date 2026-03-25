@@ -328,7 +328,7 @@ const CARDS = [
       en: "Game made during the 2026 global gamejam."
     },
     img:    "assets/RWMenu.png",
-    video:  "",
+    video:  "assets/KidRobber.mp4",
     github: "https://github.com/RaphBv/Global-GameJam-Robing-William",
     tech:   ["unreal","blueprint"],
     atk:    "1200",
