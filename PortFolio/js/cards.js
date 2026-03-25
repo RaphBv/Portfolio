@@ -351,6 +351,10 @@ const CARDS = [
         <img src="assets/RWInGame.png" alt="Images"/>
         <img src="assets/RWAI.png" alt="Images"/>
         <img src="assets/RWMap.png" alt="Images"/>
+        <h3>🔧 Difficultés rencontrées</h3>
+        <ul>
+          <li>48 heures pour faire le jeu</li>
+        </ul>
       `,
       en: `
         <p>Game made in 48H with "MASK" theme.</p>
@@ -369,6 +373,10 @@ const CARDS = [
         <img src="assets/RWInGame.png" alt="Images"/>
         <img src="assets/RWAI.png" alt="Images"/>
         <img src="assets/RWMap.png" alt="Images"/>
+        <h3>🔧 Challenges faced</h3>
+        <ul>
+          <li>48 hours to make the game</li>
+        </ul>
       `
     }
   },
@@ -382,7 +390,7 @@ const CARDS = [
       en: "Game made during the december 2025 gamejam of my school."
     },
     img:    "assets/MAMMenu.png",
-    video:  "",
+    video:  "assets/MAM.mp4",
     github: "https://github.com/RaphBv/GameJam-MAM",
     tech:   ["unreal","blueprint"],
     atk:    "1200",
@@ -402,6 +410,10 @@ const CARDS = [
         <h3>📸 Images</h3>
         <img src="assets/MAMMenu.png" alt="Images"/>
         <img src="assets/MAMInGame.png" alt="Images"/>
+        <h3>🔧 Difficultés rencontrées</h3>
+        <ul>
+          <li>48 heures pour faire le jeu</li>
+        </ul>
       `,
       en: `
         <p>Game made in 48H with "WEDDING" theme.</p>
@@ -417,6 +429,10 @@ const CARDS = [
         <h3>📸 Images</h3>
         <img src="assets/MAMMenu.png" alt="Images"/>
         <img src="assets/MAMInGame.png" alt="Images"/>
+        <h3>🔧 Challenges faced</h3>
+        <ul>
+          <li>48 hours to make the game</li>
+        </ul>
       `
     }
   },
