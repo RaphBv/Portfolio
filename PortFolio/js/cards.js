@@ -489,7 +489,7 @@ const CARDS = [
       en: "Personal Unity game project."
     },
     img:    "assets/RocketInGame.png",
-    video:  "",
+    video:  "assets/RocketBoost.mp4",
     github: "https://github.com/RaphBv/RocketBoost",
     tech:   ["unity", "csharp"],
     atk:    "1400",
