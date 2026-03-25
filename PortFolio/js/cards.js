@@ -345,6 +345,8 @@ const CARDS = [
         <h3>📸 Images</h3>
         <img src="assets/RWMenu.png" alt="Images"/>
         <img src="assets/RWInGame.png" alt="Images"/>
+        <img src="assets/RWAI.png" alt="Images"/>
+        <img src="assets/RWMap.png" alt="Images"/>
       `,
       en: `
         <p>Game made in 48H with "MASK" theme.</p>
@@ -361,6 +363,8 @@ const CARDS = [
         <h3>📸 Images</h3>
         <img src="assets/RWMenu.png" alt="Images"/>
         <img src="assets/RWInGame.png" alt="Images"/>
+        <img src="assets/RWAI.png" alt="Images"/>
+        <img src="assets/RWMap.png" alt="Images"/>
       `
     }
   },
@@ -467,7 +471,7 @@ const CARDS = [
   },
 
   {
-    name:   "Rocket Boost",
+    name:   "Rocket Drift",
     type:   "[Gameplay Programmer]",
     stars:  4,
     desc: {
@@ -491,7 +495,9 @@ const CARDS = [
           <li>Transition automatique entre les niveaux à l’arrivée</li>
         </ul>
         <h3>📸 Images</h3>
+        <img src="assets/RocketMenu.png" alt="Images"/>
         <img src="assets/RocketInGame.png" alt="Images"/>
+        <img src="assets/RocketFinish.png" alt="Images"/>
         <h3>🔧 Difficultés rencontrées</h3>
         <ul>
           <li>Gestion d’un système de mouvement physique précis et contrôlable par le joueur</li>
@@ -510,7 +516,9 @@ const CARDS = [
           <li>Level transitions upon reaching the goal</li>
         </ul>
         <h3>📸 Images</h3>
+        <img src="assets/RocketMenu.png" alt="Images"/>
         <img src="assets/RocketInGame.png" alt="Images"/>
+        <img src="assets/RocketFinish.png" alt="Images"/>
         <h3>🔧 Challenges faced</h3>
         <ul>
           <li>Handling precise and controllable physics-based movement</li>
