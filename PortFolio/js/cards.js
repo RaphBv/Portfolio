@@ -222,6 +222,8 @@ const CARDS = [
         <h3>📸 Images</h3>
         <img src="assets/KOTMainMenu.png" alt="Images"/>
         <img src="assets/KOTInGame.png" alt="Images"/>
+        <img src="assets/KOTLocks.png" alt="Images"/>
+        <img src="assets/KOTLevelEditor.png" alt="Images"/>
         <h3>🔧 Difficultés rencontrées</h3>
         <ul>
           <li>Gestion précise des collisions et des rebonds contre les murs pour obtenir un gameplay cohérent et satisfaisant</li>
@@ -242,6 +244,8 @@ const CARDS = [
         <h3>📸 Images</h3>
         <img src="assets/KOTMainMenu.png" alt="Images"/>
         <img src="assets/KOTInGame.png" alt="Images"/>
+        <img src="assets/KOTLocks.png" alt="Images"/>
+        <img src="assets/KOTLevelEditor.png" alt="Images"/>
         <h3>🔧 Challenges faced</h3>
         <ul>
           <li>Accurate collision handling and wall-bounce behavior to achieve consistent and satisfying gameplay</li>
@@ -444,6 +448,9 @@ const CARDS = [
         <h3>📸 Images</h3>
         <img src="assets/SMap.png" alt="Images"/>
         <img src="assets/SInGame.png" alt="Images"/>
+        <img src="assets/SAI.png" alt="Images"/>
+        <img src="assets/SInventory.png" alt="Images"/>
+        <img src="assets/SBuild.png" alt="Images"/>
         <h3>🔧 Difficultés rencontrées</h3>
         <ul>
           <li>Gestion de systèmes interconnectés (inventaire, construction, IA) tout en maintenant une architecture cohérente</li>
@@ -461,6 +468,9 @@ const CARDS = [
         <h3>📸 Images</h3>
         <img src="assets/SMap.png" alt="Images"/>
         <img src="assets/SInGame.png" alt="Images"/>
+        <img src="assets/SAI.png" alt="Images"/>
+        <img src="assets/SInventory.png" alt="Images"/>
+        <img src="assets/SBuild.png" alt="Images"/>
         <h3>🔧 Challenges faced</h3>
         <ul>
             <li>Managing interconnected systems (inventory, building, AI) while maintaining a coherent architecture</li>
