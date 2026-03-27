@@ -557,6 +557,67 @@ const CARDS = [
     }
   },
 
+  {
+    name:   "Supra BOII",
+    type:   "[Gameplay Programmer]",
+    stars:  7,
+    desc: {
+      fr: "Projet d'études en multijoueur sur Unity.",
+      en: "Multiplayer studies project on Unity."
+    },
+    img:    "assets/RocketInGame.png",
+    video:  "assets/RocketBoost.mp4",
+    github: "https://github.com/RaphBv/RocketBoost",
+    tech:   ["unity", "csharp"],
+    atk:    "3000",
+    def:    "3000",
+    details: {
+      fr: `
+        <p>Projet d'études en multijoueur sur Unity. Let but eétait de reproduire le mode de jeu domination de Call Of Duty Black Ops 2 avec des 3C de SupraLand.</p>
+        <h3>🎯 Ce que j'ai développé</h3>
+        <ul>
+          <li>Implémentation d’un système de déplacement basé sur la physique (propulsion dépendante de la rotation du vaisseau)</li>
+          <li>Création de pièges avec interactions gameplay</li>
+          <li>Mise en place de la boucle de jeu principale</li>
+          <li>Transition automatique entre les niveaux à l’arrivée</li>
+        </ul>
+        <h3>📸 Images</h3>
+        <img src="assets/RocketMenu.png" alt="Images"/>
+        <img src="assets/RocketInGame.png" alt="Images"/>
+        <img src="assets/RocketFinish.png" alt="Images"/>
+        <h3>🔧 Difficultés rencontrées</h3>
+        <ul>
+          <li>Gestion d’un système de mouvement physique précis et contrôlable par le joueur</li>
+          <li>Synchronisation entre rotation et direction de propulsion</li>
+          <li>Équilibrage du gameplay pour garantir des sensations de contrôle fluides</li>
+          <li>Gestion des transitions de niveau sans casser le rythme de jeu</li>
+        </ul>
+      `,
+      en: `
+        <p>A personal project in Unity with a ship 2.5D.</p>
+        <h3>🎯 What I developed</h3>
+        <ul>
+          <li>Implementation of a physics-based movement system (thrust driven by the ship’s rotation)</li>
+          <li>Creation of traps with gameplay interactions</li>
+          <li>Implementation of the main game loop</li>
+          <li>Level transitions upon reaching the goal</li>
+        </ul>
+        <h3>📸 Images</h3>
+        <img src="assets/RocketMenu.png" alt="Images"/>
+        <img src="assets/RocketInGame.png" alt="Images"/>
+        <img src="assets/RocketFinish.png" alt="Images"/>
+        <h3>🔧 Challenges faced</h3>
+        <ul>
+          <li>Handling precise and controllable physics-based movement</li>
+          <li>Synchronizing rotation with propulsion direction</li>
+          <li>Balancing gameplay to ensure smooth and responsive controls</li>
+          <li>Managing level transitions without breaking gameplay flow</li>
+        </ul>
+        
+      `
+    }
+  },
+
 ];
 
 /* ═══════════════════════════════════════════════════════════
