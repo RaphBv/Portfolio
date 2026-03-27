@@ -14,7 +14,7 @@ const CARDS = [
       en: "Horror game inspired by Five Nights at Freddy's by Scott Cawthon."
     },
     img:    "assets/SunMainMenu.png",
-    video:  "",
+    video:  "assets/Sun's.mp4",
     github: "https://github.com/UltiRed8/Sun-s-Arrival",
     tech:   ["unreal","blueprint"],
     atk:    "3500",
@@ -82,7 +82,7 @@ const CARDS = [
       en: "Splitscreen local game in turn by turn."
     },
     img:    "assets/OverdoseMainMenu.png",
-    video:  "",
+    video:  "assets/Overdose.mp4",
     github: "https://github.com/UltiRed8/OverdoseProject",
     tech:   ["unreal","cpp"],
     atk:    "2400",
