@@ -565,9 +565,9 @@ const CARDS = [
       fr: "Projet d'études en multijoueur sur Unity.",
       en: "Multiplayer studies project on Unity."
     },
-    img:    "assets/RocketInGame.png",
-    video:  "assets/RocketBoost.mp4",
-    github: "https://github.com/RaphBv/RocketBoost",
+    img:    "assets/SupraInGame.png",
+    video:  "",
+    github: "https://github.com/RaphBv/SupraBOII",
     tech:   ["unity", "csharp"],
     atk:    "3000",
     def:    "3000",
@@ -582,9 +582,11 @@ const CARDS = [
           <li>Transition automatique entre les niveaux à l’arrivée</li>
         </ul>
         <h3>📸 Images</h3>
-        <img src="assets/RocketMenu.png" alt="Images"/>
-        <img src="assets/RocketInGame.png" alt="Images"/>
-        <img src="assets/RocketFinish.png" alt="Images"/>
+        <img src="assets/SupraMainMenu.png" alt="Images"/>
+        <img src="assets/SupraInGame.png" alt="Images"/>
+        <img src="assets/SupraMap.png" alt="Images"/>
+        <img src="assets/SupraTemple.png" alt="Images"/>
+        <img src="assets/SupraCapture.png" alt="Images"/>
         <h3>🔧 Difficultés rencontrées</h3>
         <ul>
           <li>Gestion d’un système de mouvement physique précis et contrôlable par le joueur</li>
@@ -603,9 +605,11 @@ const CARDS = [
           <li>Level transitions upon reaching the goal</li>
         </ul>
         <h3>📸 Images</h3>
-        <img src="assets/RocketMenu.png" alt="Images"/>
-        <img src="assets/RocketInGame.png" alt="Images"/>
-        <img src="assets/RocketFinish.png" alt="Images"/>
+        <img src="assets/SupraMainMenu.png" alt="Images"/>
+        <img src="assets/SupraInGame.png" alt="Images"/>
+        <img src="assets/SupraMap.png" alt="Images"/>
+        <img src="assets/SupraTemple.png" alt="Images"/>
+        <img src="assets/SupraCapture.png" alt="Images"/>
         <h3>🔧 Challenges faced</h3>
         <ul>
           <li>Handling precise and controllable physics-based movement</li>
