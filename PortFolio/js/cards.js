@@ -573,13 +573,18 @@ const CARDS = [
     def:    "3000",
     details: {
       fr: `
-        <p>Projet d'études en multijoueur sur Unity. Let but eétait de reproduire le mode de jeu domination de Call Of Duty Black Ops 2 avec des 3C de SupraLand.</p>
+        <p>Projet d'études en multijoueur sur Unity. Le but était de reproduire le mode de jeu domination de Call Of Duty Black Ops 2 avec des 3C de SupraLand.</p>
         <h3>🎯 Ce que j'ai développé</h3>
         <ul>
-          <li>Implémentation d’un système de déplacement basé sur la physique (propulsion dépendante de la rotation du vaisseau)</li>
-          <li>Création de pièges avec interactions gameplay</li>
-          <li>Mise en place de la boucle de jeu principale</li>
-          <li>Transition automatique entre les niveaux à l’arrivée</li>
+          <li>Implémentation des 3C (Character, Camera, Controls) pour un gameplay dynamique et fluide</li>
+          <li>Développement d’un système de capture de points avec gestion du contrôle des zones</li>
+          <li>Implémentation des mécaniques de combat (tir, dégâts, grenades)</li>
+          <li>Création d’un système d’économie avec collecte de pièces</li>
+          <li>Ajout d’une mini-carte pour améliorer la lisibilité du gameplay</li>
+          <li>Développement d’un système de score accordant des points lors des captures et éliminations</li>
+          <li>Implémentation d’un système de récompenses débloquant des capacités spéciales (ex : frappes aériennes) selon des seuils de points</li>
+          <li>Gestion du respawn des joueurs avec changement dynamique des points d’apparition</li>
+          <li>Implémentation des conditions de victoire (première équipe à atteindre 100 points)</li>
         </ul>
         <h3>📸 Images</h3>
         <img src="assets/SupraMainMenu.png" alt="Images"/>
@@ -589,20 +594,26 @@ const CARDS = [
         <img src="assets/SupraCapture.png" alt="Images"/>
         <h3>🔧 Difficultés rencontrées</h3>
         <ul>
-          <li>Gestion d’un système de mouvement physique précis et contrôlable par le joueur</li>
-          <li>Synchronisation entre rotation et direction de propulsion</li>
-          <li>Équilibrage du gameplay pour garantir des sensations de contrôle fluides</li>
-          <li>Gestion des transitions de niveau sans casser le rythme de jeu</li>
+          <li>Synchronisation des systèmes de gameplay en multijoueur (capture de points, dégâts, score)</li>
+          <li>Gestion cohérente des états des zones capturées entre les clients</li>
+          <li>Équilibrage du système de score et des récompenses pour maintenir un gameplay compétitif</li>
+          <li>Gestion dynamique des points de spawn pour éviter les situations injustes</li>
+          <li>Maintien d’un game feel fluide malgré les contraintes réseau</li>
         </ul>
       `,
       en: `
-        <p>A personal project in Unity with a ship 2.5D.</p>
+        <p>Project of studies in multiplayer on Unity. The goal was to reproduce the domination game mode of Call Of Duty Black Ops 2 with 3C from SupraLand.</p>
         <h3>🎯 What I developed</h3>
         <ul>
-          <li>Implementation of a physics-based movement system (thrust driven by the ship’s rotation)</li>
-          <li>Creation of traps with gameplay interactions</li>
-          <li>Implementation of the main game loop</li>
-          <li>Level transitions upon reaching the goal</li>
+          <li>Implementation of the 3Cs (Character, Camera, Controls) for dynamic and responsive gameplay</li>
+          <li>Development of a capture system with zone control mechanics</li>
+          <li>Implementation of combat mechanics (shooting, damage, grenades)</li>
+          <li>Creation of an economy system with coin collection</li>
+          <li>Integration of a mini-map to improve gameplay readability</li>
+          <li>Development of a scoring system rewarding captures and eliminations</li>
+          <li>Implementation of a reward system unlocking special abilities (e.g., airstrikes) based on score thresholds</li>
+          <li>Handling player respawn with dynamic spawn point selection</li>
+          <li>Implementation of win conditions (first team to reach 100 points)</li>
         </ul>
         <h3>📸 Images</h3>
         <img src="assets/SupraMainMenu.png" alt="Images"/>
@@ -612,10 +623,11 @@ const CARDS = [
         <img src="assets/SupraCapture.png" alt="Images"/>
         <h3>🔧 Challenges faced</h3>
         <ul>
-          <li>Handling precise and controllable physics-based movement</li>
-          <li>Synchronizing rotation with propulsion direction</li>
-          <li>Balancing gameplay to ensure smooth and responsive controls</li>
-          <li>Managing level transitions without breaking gameplay flow</li>
+          <li>Synchronizing gameplay systems in a multiplayer environment (capture points, damage, scoring)</li>
+          <li>Maintaining consistent zone states across clients</li>
+          <li>Balancing scoring and reward systems to ensure competitive gameplay</li>
+          <li>Managing dynamic spawn points to prevent unfair situations</li>
+          <li>Maintaining smooth game feel despite network constraints</li>
         </ul>
         
       `
