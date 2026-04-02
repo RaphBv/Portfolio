@@ -645,7 +645,7 @@ const UI = {
     phText:    "Sélectionne une carte<br/>pour révéler son pouvoir…",
     moreBtn:   "✦ En savoir plus",
     detTitle:  "⟁ Détails du Projet",
-    githubBtn: "⟁ GitHub",
+    githubBtn: "GitHub",
     noDetail:  "Aucun détail renseigné pour ce projet.",
     playHint:  "Clique l'image pour jouer",
     aboutBio:  `Passionné par la création de mécaniques de jeu et l'expérience joueur.
@@ -658,7 +658,7 @@ const UI = {
     phText:    "Select a card<br/>to reveal its power…",
     moreBtn:   "✦ Learn more",
     detTitle:  "⟁ Project Details",
-    githubBtn: "⟁ GitHub",
+    githubBtn: " GitHub",
     noDetail:  "No details provided for this project.",
     playHint:  "Click image to play",
     aboutBio:  `Passionate about crafting game mechanics and player experience.
