@@ -134,6 +134,76 @@ const CARDS = [
   },
 
   {
+    name:   "Underground Experience",
+    type:   "[GameJam/Gameplay Programmer]",
+    stars:  5,
+    desc: {
+      fr: "Jeu développé lors de la gamejam de mars 2026 de mon école.",
+      en: "Game made during the march 2026 gamejam of my school."
+    },
+    img:    "assets/UEMainMenu.png",
+    video:  "",
+    github: "https://github.com/RaphBv/GameJamUE",
+    tech:   ["unreal","blueprint"],
+    atk:    "2000",
+    def:    "2000",
+    details: {
+      fr: `
+        <p>Développement d'un jeu en 48h sur le thème "22 mai 1859" et "Edimburgh".</p>
+        <h3>🎯 Ce que j'ai développé</h3>
+        <ul>
+  	  <li>Développement du menu principal et de l’interface du tutoriel</li>
+  	  <li>Implémentation d’un système de gravité avancé permettant au joueur de se déplacer sur les murs, les sphères et à l’envers</li>
+  	  <li>Création de portails avec Render Texture / Render Target pour assurer des transitions fluides entre les zones</li>
+  	  <li>Développement d’un système d’objets à récupérer pour déverrouiller des portes</li>
+  	  <li>Implémentation d’objets interactifs qui s’écartent à l’approche du joueur</li>
+  	  <li>Création d’un acteur à suivre avec système de proximité pour déclencher sa progression</li>
+ 	  <li>Développement des 3C (Character, Camera, Controls)</li>
+	  <li>Optimisation des performances pour limiter le lag durant le gameplay</li>
+	</ul>
+        <h3>📸 Images</h3>
+        <img src="assets/UEMainMenu.png" alt="Images"/>
+	<img src="assets/UECity.png" alt="Images"/>
+	<img src="assets/UEMetro.png" alt="Images"/>
+	<img src="assets/UEGravity.png" alt="Images"/>
+	<img src="assets/UEFigure.png" alt="Images"/>
+        <h3>🔧 Difficultés rencontrées</h3>
+        <ul>
+          <li>48 heures pour faire le jeu</li>
+          <li>Gestion d’un système de gravité non conventionnel sur plusieurs surfaces et orientations</li>
+  	  <li>Implémentation de transitions fluides via Render Target sans impact majeur sur les performances</li>
+        </ul>
+      `,
+      en: `
+        <p>Game made in 48H with "22 may 1859" and "Edimburgh" theme.</p>
+        <h3>🎯 What I developed</h3>
+        <ul>
+  	  <li>Development of the main menu and tutorial UI</li>
+  	  <li>Implementation of an advanced gravity system allowing the player to walk on walls, spheres, and upside down</li>
+  	  <li>Creation of portals using Render Texture / Render Target to ensure smooth transitions between areas</li>
+  	  <li>Development of a collectible item system used to unlock doors</li>
+  	  <li>Implementation of interactive objects that move away when the player approaches</li>
+  	  <li>Creation of a companion / actor-follow system with proximity-based progression triggers</li>
+  	  <li>Development of the 3Cs (Character, Camera, Controls)</li>
+  	  <li>Performance optimization to reduce lag during gameplay</li>
+	</ul>
+        <h3>📸 Images</h3>
+        <img src="assets/UEMainMenu.png" alt="Images"/>
+	<img src="assets/UECity.png" alt="Images"/>
+	<img src="assets/UEMetro.png" alt="Images"/>
+	<img src="assets/UEGravity.png" alt="Images"/>
+	<img src="assets/UEFigure.png" alt="Images"/>
+        <h3>🔧 Challenges faced</h3>
+        <ul>
+          <li>48 hours to make the game</li>
+          <li>Handling a non-standard gravity system across multiple surfaces and orientations</li>
+          <li>Implementing smooth transitions through Render Targets without major performance impact</li>
+        </ul>
+      `
+    }
+  },
+
+  {
     name:   "Game GeoGuessor",
     type:   "[Python / Game]",
     stars:  5,
