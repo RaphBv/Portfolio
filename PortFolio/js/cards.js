@@ -203,8 +203,8 @@ const CARDS = [
     type:   "[Python / Game]",
     stars:  5,
     desc: {
-      fr: "Un GeoGuesseur mais sur des jeux videos en Python",
-      en: "A GeoGuesseur but on video games in Python"
+      fr: "Un GeoGuessr mais sur des jeux videos en Python",
+      en: "A GeoGuessr but on video games in Python"
     },
     img:    "assets/GeoMenu.png",
     video:  "",
