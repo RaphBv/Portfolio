@@ -1,7 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   canvas.js — Particules + éclairs du fond animé
-═══════════════════════════════════════════════════════════ */
-
 const cv = document.getElementById('bgc');
 const cx = cv.getContext('2d');
 let W, H;
@@ -13,7 +9,7 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
-/* --- Petits points dorés flottants --- */
+/* --- Floating golden points --- */
 const pts = Array.from({length: 60}, spawnPt);
 
 function spawnPt() {
@@ -28,7 +24,7 @@ function spawnPt() {
   };
 }
 
-/* --- Particules YGO (étoiles, losanges, hexagones…) --- */
+/* --- Particles --- */
 const PARTICLES = Array.from({length: 120}, mkParticle);
 
 function mkParticle() {
@@ -62,7 +58,7 @@ function drawParticle(p) {
   cx.strokeStyle = cx.fillStyle = color;
   cx.lineWidth = .8;
   switch (p.type) {
-    case 0: // Étoile à 4 branches
+    case 0: // 4 branches stars
       cx.beginPath();
       for (let i = 0; i < 4; i++) {
         const a1 = i * Math.PI / 2, a2 = a1 + Math.PI / 4;
@@ -93,7 +89,7 @@ function drawParticle(p) {
   cx.restore();
 }
 
-/* --- Éclairs --- */
+/* --- Bolts --- */
 const bolts  = [];
 let bTimer   = 0;
 let introActive = true; // exposé globalement pour app.js
@@ -114,11 +110,11 @@ function buildBolt(x1, y1, x2, y2, d) {
   return [...buildBolt(x1,y1,mx,my,d-1), ...buildBolt(mx,my,x2,y2,d-1)];
 }
 
-/* --- Boucle principale --- */
+/* --- Draw --- */
 (function draw() {
   cx.clearRect(0, 0, W, H);
 
-  // Points dorés
+  // Golden Points
   pts.forEach((p, i) => {
     p.x += p.vx; p.y += p.vy; p.life++;
     const t = p.life / p.max;
@@ -130,7 +126,6 @@ function buildBolt(x1, y1, x2, y2, d) {
     if (p.life >= p.max) pts[i] = spawnPt();
   });
 
-  // Particules YGO
   PARTICLES.forEach((p, i) => {
     p.x += p.vx + Math.sin(p.pulse) * .2;
     p.y += p.vy;
@@ -141,7 +136,6 @@ function buildBolt(x1, y1, x2, y2, d) {
     drawParticle(p);
   });
 
-  // Éclairs (intro seulement)
   if (introActive) {
     bTimer++;
     if (bTimer > 35) { spawnBolt(); bTimer = Math.random() * 15; }

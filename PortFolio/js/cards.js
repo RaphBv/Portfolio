@@ -1,8 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   cards.js — Données des cartes + textes de l'interface
-   Modifier ce fichier pour ajouter / éditer vos projets.
-═══════════════════════════════════════════════════════════ */
-
 const CARDS = [
 
   {
@@ -706,9 +701,6 @@ const CARDS = [
 
 ];
 
-/* ═══════════════════════════════════════════════════════════
-   Textes de l'interface (FR / EN)
-═══════════════════════════════════════════════════════════ */
 const UI = {
   fr: {
     deckTitle: "Mon Deck",
@@ -738,9 +730,6 @@ const UI = {
   }
 };
 
-/* ═══════════════════════════════════════════════════════════
-   Icônes technologie
-═══════════════════════════════════════════════════════════ */
 const TECH = {
   unreal: { l:"Unreal",  c:"#e0e0e0", s:`<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l7 4.5-7 4.5z"/></svg>` },
   unity:  { l:"Unity",   c:"#e0e0e0", s:`<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18L20 8v8l-8 4-8-4V8l8-3.82zM12 7l-4 2v4l4 2 4-2v-4l-4-2z"/></svg>` },

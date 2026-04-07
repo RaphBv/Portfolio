@@ -1,13 +1,7 @@
-/* ═══════════════════════════════════════════════════════════
-   app.js — Logique principale
-   Dépend de : cards.js (CARDS, UI, TECH), lang.js (lang), canvas.js (introActive)
-═══════════════════════════════════════════════════════════ */
+let sel        = null;   
+let activeTags = new Set(); 
 
-let sel        = null;   // index carte sélectionnée
-let activeTags = new Set(); // tags actifs pour le filtre
-
-/* ─── Patch logo Unreal réel ─── */
-// Remplace le SVG générique par le vrai logo Unreal Engine
+/* ─── SVG Unreal ─── */
 const UNREAL_SVG = `<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.4c5.302 0 9.6 4.298 9.6 9.6s-4.298 9.6-9.6 9.6S2.4 17.302 2.4 12 6.698 2.4 12 2.4zm0 1.8c-4.308 0-7.8 3.492-7.8 7.8s3.492 7.8 7.8 7.8 7.8-3.492 7.8-7.8-3.492-7.8-7.8-7.8zm-1.2 3.0h1.8c2.1 0 3.6 1.2 3.6 3.0 0 1.2-.6 2.1-1.5 2.55l1.95 3.45h-2.1l-1.65-3.0H12v3.0h-1.8V7.2h.6zm1.2 1.5v2.4h.6c1.05 0 1.8-.45 1.8-1.2s-.75-1.2-1.8-1.2H12z"/></svg>`;
 
 /* ─── SVG GitHub ─── */
@@ -46,14 +40,14 @@ function techHtml(list) {
   }).join('');
 }
 
-/* ─── Tags : liste unique de tous les tags du deck ─── */
+/* ─── Tags  ─── */
 function getAllTags() {
   const set = new Set();
   CARDS.forEach(c => (c.tech || []).forEach(t => set.add(t)));
   return [...set];
 }
 
-/* ─── Filtres tag ─── */
+/* ─── Filters tag ─── */
 function renderTagFilters() {
   const wrap = document.getElementById('tag-filters');
   if (!wrap) return;
@@ -73,7 +67,7 @@ function renderTagFilters() {
   });
 }
 
-/* ─── Cartes filtrées ─── */
+/* ─── Filtered cards ─── */
 function filteredCards() {
   if (activeTags.size === 0) return CARDS.map((_, i) => i);
   return CARDS.map((c, i) => i).filter(i =>
@@ -81,7 +75,6 @@ function filteredCards() {
   );
 }
 
-/* ─── Intro → App ─── */
 function enterDuel() {
   introActive = false;
   document.getElementById('intro').classList.add('out');
@@ -97,7 +90,6 @@ function enterDuel() {
     wrap.appendChild(d);
   }
 
-  // Patch : vrai logo Unreal
   if (typeof TECH !== 'undefined' && TECH.unreal) {
     TECH.unreal.s = UNREAL_SVG;
   }
@@ -108,7 +100,7 @@ function enterDuel() {
 
 }
 
-/* ─── Grille ─── */
+/* ─── Grid ─── */
 function renderGrid() {
   const g       = document.getElementById('grid');
   const visible = filteredCards();
@@ -140,7 +132,7 @@ function renderGrid() {
     visible.length + ' / ' + CARDS.length + ' card' + (CARDS.length !== 1 ? 's' : '');
 }
 
-/* ─── Sélection ─── */
+/* ─── Selection ─── */
 function pick(i) {
   if (sel === i) return;
   sel = i;
@@ -165,7 +157,7 @@ function showPh() {
   d.innerHTML = '';
 }
 
-/* ─── Détail carte gauche ─── */
+/* ─── Left card detail ─── */
 function showDetail(c) {
   document.getElementById('ph').style.display = 'none';
   const d = document.getElementById('cd');
@@ -211,7 +203,7 @@ function showDetail(c) {
     ${moreHtml}
     <div class="d-hint"></div>`;
 
-  // Vidéo
+  // Video
   const art = document.getElementById('cfart');
   if (art && hasVid) {
     const v       = art.querySelector('video');

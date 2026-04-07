@@ -1,8 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   lang.js — Gestion du switch de langue FR / EN
-   Dépend de : cards.js (UI, CARDS), app.js (renderGrid, showDetail, sel)
-═══════════════════════════════════════════════════════════ */
-
 let lang = 'fr';
 
 function setLang(l) {
@@ -16,12 +11,12 @@ function setLang(l) {
   document.getElementById('lbl-en').className =
     'lang-label ' + (l === 'en' ? 'active' : 'inactive');
 
-  // Textes dynamiques
+  // Dynamics Texts
   document.getElementById('ph-text').innerHTML      = UI[l].phText;
   document.getElementById('deck-title').textContent = UI[l].deckTitle;
   document.getElementById('about-bio-text').innerHTML = UI[l].aboutBio;
 
-  // Rafraîchir la grille et la carte sélectionnée
+  // Refresh grid and selected card
   renderGrid();
   if (sel !== null) showDetail(CARDS[sel]);
 }
