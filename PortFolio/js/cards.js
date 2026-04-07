@@ -21,7 +21,7 @@ const CARDS = [
     def:    "3500",
     details: {
       fr: `
-        <p>Un projet qui de base était un exercice de Objectif3D, mais nous avons décidé de le continuer</p>
+        <p>À l’origine conçu comme un exercice de level design dans le cadre de la formation Objectif3D, ce projet a rapidement évolué bien au-delà de son objectif initial. Nous avons choisi de le développer jusqu’à une version aboutie en y intégrant une intelligence artificielle destinée à maintenir une pression constante sur le joueur. Le gameplay repose également sur un système de progression avec des salles qui se débloquent au fur et à mesure de l’avancement dans le jeu. Pensé pour une expérience coopérative, le projet peut être joué jusqu’à 3 joueurs.</p>
         <h3>🎯 Ce que j'ai développé</h3>
         <ul>
           <li>Implémentation des 3C (Character, Camera, Controls), avec gestion des caméras en vue 1ère et 3ème personne</li>
@@ -46,7 +46,7 @@ const CARDS = [
         </ul>
       `,
       en: `
-        <p>A project started as an exercise from Objectif3D but quickly became a project we continued.</p>
+        <p>Originally created as a level design exercise during the Objectif3D program, this project quickly grew beyond its initial purpose. We decided to fully develop it into a complete experience by adding an AI system designed to constantly pressure the player. The gameplay also features a progression system where new rooms unlock as the player advances through the game. Designed as a cooperative experience, the game supports up to 3 players.</p>
         <h3>🎯 What I developed</h3>
         <ul>
           <li>Implementation of the 3Cs (Character, Camera, Controls), including first-person and third-person camera systems</li>
@@ -89,7 +89,7 @@ const CARDS = [
     def:    "2000",
     details: {
       fr: `
-        <p>Jeu de fin de première année de mes études en collaboration avec des graphistes en 1 mois</p>
+        <p>Réalisé comme projet de fin de première année, ce jeu de stratégie au tour par tour a été conçu pour une expérience multijoueur locale en écran partagé. Un joueur utilise le clavier et la souris tandis que l’autre joue à la manette, offrant une configuration asymétrique pensée pour le jeu en duo sur le même écran. L’objectif est d’éliminer l’équipe adverse en planifiant soigneusement chaque déplacement et chaque action. Toute action effectuée, qu’il s’agisse d’attaquer ou d’être touché, met immédiatement fin au tour du joueur, renforçant ainsi la dimension tactique et stratégique du gameplay.</p>
         <h3>🎯 Ce que j'ai développé</h3>
         <ul>
           <li>Développement de différents gameplays events (mort, soins, attribution d'armes, etc.)</li>
@@ -110,7 +110,7 @@ const CARDS = [
         </ul>
       `,
       en: `
-        <p>Ending game of innocent year of my studies in collaboration with graphic designers in 1 month</p>
+        <p>Created as the end-of-first-year project, this turn-based strategy game was designed as a local multiplayer split-screen experience. One player uses a keyboard and mouse while the other plays with a controller, creating an asymmetric setup tailored for two players on the same screen. The objective is to eliminate the opposing team through careful planning of every movement and action. Any action performed, whether attacking, or being hit, immediately ends the player’s turn, emphasizing the tactical and strategic depth of the gameplay.</p>
         <h3>🎯 What I developed</h3>
         <ul>
           <li>Development of various gameplay events (death, healing, weapon granting, etc.)</li>
@@ -149,7 +149,7 @@ const CARDS = [
     def:    "2000",
     details: {
       fr: `
-        <p>Développement d'un jeu en 48h sur le thème "22 mai 1859" et "Edimburgh".</p>
+        <p>Réalisé lors de la game jam de mars 2026 organisée par mon école, ce projet a été développé en seulement 48 heures autour des thèmes « 22 mai 1859 » et « Edimbourg ». Le jeu propose au joueur de progresser à travers différentes salles et énigmes, chacune pensée pour faire avancer à la fois le gameplay et la narration. L’objectif était de construire une expérience immersive menant à une révélation finale : le joueur revient à son point de départ et comprend qu’il est prisonnier d’une boucle temporelle. Ce projet met en avant notre capacité à concevoir rapidement une expérience cohérente, narrative et engageante sous forte contrainte de temps.</p>
         <h3>🎯 Ce que j'ai développé</h3>
         <ul>
   	  <li>Développement du menu principal et de l’interface du tutoriel</li>
@@ -175,7 +175,7 @@ const CARDS = [
         </ul>
       `,
       en: `
-        <p>Game made in 48H with "22 may 1859" and "Edimburgh" theme.</p>
+        <p>Created during my school’s March 2026 game jam, this project was developed in just 48 hours around the themes “May 22, 1859” and “Edinburgh.” The game takes the player through a series of rooms and puzzles, each designed to drive both gameplay progression and narrative development. The goal was to build an immersive experience leading to a final reveal: the player returns to the starting point and realizes they are trapped in a time loop. This project highlights our ability to quickly design a cohesive, narrative-driven, and engaging experience under tight time constraints.</p>
         <h3>🎯 What I developed</h3>
         <ul>
   	  <li>Development of the main menu and tutorial UI</li>
@@ -219,7 +219,7 @@ const CARDS = [
     def:    "1600",
     details: {
       fr: `
-        <p>Projet réalisé en Python, le but est de trouver l'endroit exacte sur le niveau de l'image affiché.</p>
+        <p>Réalisé en tant que projet personnel en Python, ce jeu s’inspire du concept de GeoGuessr en l’adaptant à l’univers du jeu vidéo. Le principe est de proposer au joueur de deviner l’emplacement d’une image ou d’une scène issue d’un jeu vidéo. Le projet a été pensé avec une architecture flexible et facilement extensible, permettant d’ajouter rapidement n’importe quel jeu afin d’en créer sa propre version du GeoGuessr. Lorsque le jeu sélectionné possède plusieurs cartes ou environnements, le joueur peut également choisir parmi différentes maps, offrant ainsi une expérience personnalisable et évolutive.</p>
         <h3>🎯 Ce que j'ai développé</h3>
         <ul>
           <li>Conception d'un système de sélection de cartes permettant au joueur d'identifier la bonne localisation à partir d'une image</li>
@@ -241,7 +241,7 @@ const CARDS = [
         </ul>
       `,
       en: `
-        <p>Project carried out in Python, the goal is to find the exact place on the displayed image level.</p>
+        <p>Developed as a personal Python project, this game takes inspiration from the GeoGuessr concept and adapts it to the world of video games. The objective is for players to guess the location of an image or scene taken from a video game. The project was designed with a flexible and easily extensible architecture, making it simple to add virtually any game and turn it into its own GeoGuessr experience. When the selected game includes multiple maps or environments, players can also choose between different maps, creating a customizable and scalable experience.</p>
         <h3>🎯 What I developed</h3>
         <ul>
           <li>Design of a map selection system where players must identify the correct location based on an image</li>
@@ -281,7 +281,7 @@ const CARDS = [
     def:    "1700",
     details: {
       fr: `
-        <p>Jouez dans un donjon et récupérez la clé afin d'en explorer encore plus, vous pouvez également créer votre propre donjon.</p>
+        <p>Réalisé en C++ avec la bibliothèque SFML, ce projet avait pour objectif de recréer le gameplay du jeu <em>King of Thieves</em>. L’accent a été mis sur la reproduction fidèle des mécaniques principales, notamment les déplacements du personnage, les sauts, les collisions ainsi que la navigation à travers différents niveaux et pièges. Ce projet m’a permis de renforcer mes compétences en programmation orientée objet, en gestion de la physique de jeu et en développement de gameplay en temps réel dans un environnement 2D.</p>
         <h3>🎯 Ce que j'ai développé</h3>
         <ul>
           <li>Implémentation de différents types de pièges avec comportements spécifiques</li>
@@ -303,7 +303,7 @@ const CARDS = [
         </ul>
       `,
       en: `
-        <p>Play in a dungeon and retrieve the key to explore even more, you can also create your own dungeon.</p>
+        <p>Developed in C++ using the SFML library, this project aimed to recreate the gameplay of <em>King of Thieves</em>. The focus was placed on faithfully reproducing the core mechanics, including character movement, jumping, collision handling, and navigation through various levels and traps. This project allowed me to strengthen my skills in object-oriented programming, game physics management, and real-time 2D gameplay development.</p>
         <h3>🎯 What I developed</h3>
         <ul>
           <li>Implementation of various trap types with distinct behaviors</li>
@@ -343,7 +343,7 @@ const CARDS = [
     def:    "3000",
     details: {
       fr: `
-        <p>Développement d'un moteur de jeu basique "ComUnity", inspiré des principes d'Unity.</p>
+        <p>Réalisé en groupe, ce projet avait pour objectif de concevoir et développer un moteur de jeu vidéo en utilisant OpenGL. Le travail portait sur la mise en place des systèmes fondamentaux d’un moteur, tels que le rendu graphique, la gestion des objets en scène, la caméra ainsi que les interactions de base nécessaires au développement d’un jeu. Ce projet m’a permis de développer une meilleure compréhension du fonctionnement interne d’un moteur de jeu et des technologies de rendu temps réel, tout en renforçant mes compétences en travail d’équipe.</p>
         <h3>🎯 Ce que j'ai développé</h3>
         <ul>
           <li>Développement d'un système d'éclairage (lumière directionnelle, ponctuelle, etc.)</li>
@@ -365,7 +365,7 @@ const CARDS = [
         </ul>
       `,
       en: `
-        <p>Development of a basic game engine called "ComUnity", inspired by Unity's core principles.</p>
+        <p>Developed as a group project, the goal was to design and build a video game engine using OpenGL. The work focused on implementing the core systems of an engine, such as graphics rendering, scene object management, camera systems, and the basic interactions required for game development. This project allowed me to gain a deeper understanding of how a game engine works internally and of real-time rendering technologies, while also strengthening my teamwork and software.</p>
         <h3>🎯 What I developed</h3>
         <ul>
           <li>Development of a lighting system (directional light, point light, etc.)</li>
@@ -405,7 +405,7 @@ const CARDS = [
     def:    "1200",
     details: {
       fr: `
-        <p>Développement d'un jeu en 48h sur le thème "MASQUE".</p>
+        <p>Réalisé en 48 heures lors de la Global Game Jam 2026 sur le thème « Masque », ce projet propose une expérience de jeu centrée sur l’infiltration et la stratégie. Le gameplay se déroule en deux phases distinctes : une première phase de repérage, durant laquelle le joueur observe les lieux et prépare son plan, suivie d’une phase de cambriolage sous contrainte de temps. Le joueur doit alors infiltrer la maison et accomplir son objectif avant la fin du chronomètre. Ce projet met en avant notre capacité à concevoir rapidement une boucle de gameplay claire, immersive et rythmée sous forte contrainte de temps.</p>
         <h3>🎯 Ce que j'ai développé</h3>
         <ul>
           <li>Conception et implémentation du niveau tutoriel</li>
@@ -427,7 +427,7 @@ const CARDS = [
         </ul>
       `,
       en: `
-        <p>Game made in 48H with "MASK" theme.</p>
+        <p>Created in 48 hours during Global Game Jam 2026 around the theme “Mask,” this project delivers a gameplay experience focused on infiltration and strategy. The game is divided into two distinct phases: an initial scouting phase, where the player observes the environment and plans their approach, followed by the heist phase, which takes place under a strict time limit. The player must infiltrate the house and complete the objective before the timer runs out. This project highlights our ability to quickly design a clear, immersive, and well-paced gameplay loop under intense time constraints.</p>
         <h3>🎯 What I developed</h3>
         <ul>
           <li>Design and implementation of the tutorial level</li>
@@ -467,7 +467,7 @@ const CARDS = [
     def:    "1200",
     details: {
       fr: `
-        <p>Développement d'un jeu en 48h sur le thème "MARIAGE".</p>
+        <p>Réalisé en 48 heures lors de la game jam de décembre 2025 organisée par mon école autour du thème « Marriage », ce projet repose sur une boucle de gameplay axée sur la gestion du temps et la réactivité. Le joueur doit réparer en continu les dégâts causés par la belle-mère avant qu’elle ne détériore l’ensemble de l’environnement. La partie se déroule sous une contrainte de temps : si tous les éléments sont détruits, le joueur perd, tandis qu’il remporte la partie s’il parvient à maintenir l’ensemble intact jusqu’à la fin du chronomètre. Ce projet met en avant la conception d’un gameplay dynamique, basé sur la pression croissante et la prise de décision rapide.</p>
         <h3>🎯 Ce que j'ai développé</h3>
         <ul>
           <li>Développement des 3C (Character, Camera, Controls) avec intégration des animations</li>
@@ -486,7 +486,7 @@ const CARDS = [
         </ul>
       `,
       en: `
-        <p>Game made in 48H with "WEDDING" theme.</p>
+        <p>Created in 48 hours during my school’s December 2025 game jam around the theme “Wedding,” this project is built around a gameplay loop focused on time management and quick reactions. The player must continuously repair the damage caused by the mother-in-law before she destroys the entire environment. The game takes place under a time constraint: if everything gets broken, the player loses, while victory is achieved by keeping the environment intact until the timer runs out. This project highlights the design of a fast-paced gameplay experience based on increasing pressure and rapid decision-making.</p>
         <h3>🎯 What I developed</h3>
         <ul>
           <li>Development of the 3Cs (Character, Camera, Controls) with animation integration</li>
@@ -523,7 +523,7 @@ const CARDS = [
     def:    "2200",
     details: {
       fr: `
-        <p>Développement d'un jeu de survie.</p>
+        <p>Réalisé en tant que projet personnel, ce jeu de survie repose sur un ensemble de systèmes de gameplay interconnectés visant à créer une expérience immersive et évolutive. Le joueur évolue dans un monde rythmé par un cycle jour/nuit, où il doit collecter des ressources, fabriquer des outils et gérer ses besoins essentiels. Des mécaniques de survie telles que la barre de vie, la faim et la soif viennent renforcer la gestion stratégique du personnage. Le joueur a également la possibilité de dormir pour faire avancer le temps, tout en devant se préparer à d’éventuelles attaques d’ennemis. Ce projet met en avant la création d’une boucle de progression centrée sur la survie.</p>
         <h3>🎯 Ce que j'ai développé</h3>
         <ul>
           <li>Implémentation d’un système d’inventaire, de collecte de ressources et de construction</li>
@@ -543,7 +543,7 @@ const CARDS = [
         </ul>
       `,
       en: `
-        <p>Basic survival game.</p>
+        <p>Developed as a personal project, this survival game is built around a set of interconnected gameplay systems designed to create an immersive and evolving experience. The player progresses through a world driven by a day/night cycle, where they must gather resources, craft tools, and manage essential needs. Survival mechanics such as health, hunger, and thirst bars reinforce the strategic management of the character. The player can also sleep to advance time, while preparing for potential enemy attacks. This project highlights the creation of a progression loop centered around survival.</p>
         <h3>🎯 What I developed</h3>
         <ul>
           <li>Implementation of inventory, resource gathering, and building systems</li>
@@ -582,7 +582,7 @@ const CARDS = [
     def:    "1400",
     details: {
       fr: `
-        <p>Projet personnel sur Unity avec un vaisseau en 2.5D .</p>
+        <p>Ce projet consiste en un jeu de pilotage dans lequel le joueur contrôle un vaisseau capable de monter, descendre et pivoter afin de traverser différents parcours et obstacles. L’objectif était de concevoir des sensations de contrôle précises et fluides, tout en proposant des niveaux demandant maîtrise du déplacement et anticipation. Ce projet met en avant le travail sur les mécaniques de mouvement.</p>
         <h3>🎯 Ce que j'ai développé</h3>
         <ul>
           <li>Implémentation d’un système de déplacement basé sur la physique (propulsion dépendante de la rotation du vaisseau)</li>
@@ -603,7 +603,7 @@ const CARDS = [
         </ul>
       `,
       en: `
-        <p>A personal project in Unity with a ship 2.5D.</p>
+        <p>This project is a piloting game in which the player controls a spacecraft that can move up, down, and rotate in order to navigate through various courses and obstacles. The goal was to design precise and fluid controls while creating levels that require movement mastery and anticipation. This project highlights work on movement mechanics.</p>
         <h3>🎯 What I developed</h3>
         <ul>
           <li>Implementation of a physics-based movement system (thrust driven by the ship’s rotation)</li>
@@ -643,7 +643,7 @@ const CARDS = [
     def:    "3000",
     details: {
       fr: `
-        <p>Projet d'études en multijoueur sur Unity. Le but était de reproduire le mode de jeu domination de Call Of Duty Black Ops 2 avec des 3C de SupraLand.</p>
+        <p>Réalisé en multijoueur, ce projet avait pour objectif de recréer le mode de jeu « Domination » de Call of Duty: Black Ops 2. Le gameplay repose sur la capture et le contrôle de plusieurs zones stratégiques de la carte, les équipes devant accumuler des points en conservant ces objectifs le plus longtemps possible. Ce projet met en avant le développement de mécaniques multijoueur compétitives.</p>
         <h3>🎯 Ce que j'ai développé</h3>
         <ul>
           <li>Implémentation des 3C (Character, Camera, Controls) pour un gameplay dynamique et fluide</li>
@@ -672,7 +672,7 @@ const CARDS = [
         </ul>
       `,
       en: `
-        <p>Project of studies in multiplayer on Unity. The goal was to reproduce the domination game mode of Call Of Duty Black Ops 2 with 3C from SupraLand.</p>
+        <p>Developed as a multiplayer project, the goal was to recreate the “Domination” game mode from Call of Duty: Black Ops 2. The gameplay is based on capturing and controlling multiple strategic areas of the map, with teams earning points by holding these objectives for as long as possible. This project highlights the development of competitive multiplayer mechanics.</p>
         <h3>🎯 What I developed</h3>
         <ul>
           <li>Implementation of the 3Cs (Character, Camera, Controls) for dynamic and responsive gameplay</li>
