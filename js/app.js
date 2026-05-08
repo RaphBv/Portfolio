@@ -1,7 +1,13 @@
-let sel        = null;   
-let activeTags = new Set(); 
+/* ═══════════════════════════════════════════════════════════
+   app.js — Logique principale
+   Dépend de : cards.js (CARDS, UI, TECH), lang.js (lang), canvas.js (introActive)
+═══════════════════════════════════════════════════════════ */
 
-/* ─── SVG Unreal ─── */
+let sel        = null;   // index carte sélectionnée
+let activeTags = new Set(); // tags actifs pour le filtre
+
+/* ─── Patch logo Unreal réel ─── */
+// Remplace le SVG générique par le vrai logo Unreal Engine
 const UNREAL_SVG = `<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.4c5.302 0 9.6 4.298 9.6 9.6s-4.298 9.6-9.6 9.6S2.4 17.302 2.4 12 6.698 2.4 12 2.4zm0 1.8c-4.308 0-7.8 3.492-7.8 7.8s3.492 7.8 7.8 7.8 7.8-3.492 7.8-7.8-3.492-7.8-7.8-7.8zm-1.2 3.0h1.8c2.1 0 3.6 1.2 3.6 3.0 0 1.2-.6 2.1-1.5 2.55l1.95 3.45h-2.1l-1.65-3.0H12v3.0h-1.8V7.2h.6zm1.2 1.5v2.4h.6c1.05 0 1.8-.45 1.8-1.2s-.75-1.2-1.8-1.2H12z"/></svg>`;
 
 /* ─── SVG GitHub ─── */
@@ -40,14 +46,14 @@ function techHtml(list) {
   }).join('');
 }
 
-/* ─── Tags  ─── */
+/* ─── Tags : liste unique de tous les tags du deck ─── */
 function getAllTags() {
   const set = new Set();
   CARDS.forEach(c => (c.tech || []).forEach(t => set.add(t)));
   return [...set];
 }
 
-/* ─── Filters tag ─── */
+/* ─── Filtres tag ─── */
 function renderTagFilters() {
   const wrap = document.getElementById('tag-filters');
   if (!wrap) return;
@@ -67,7 +73,7 @@ function renderTagFilters() {
   });
 }
 
-/* ─── Filtered cards ─── */
+/* ─── Cartes filtrées ─── */
 function filteredCards() {
   if (activeTags.size === 0) return CARDS.map((_, i) => i);
   return CARDS.map((c, i) => i).filter(i =>
@@ -75,6 +81,7 @@ function filteredCards() {
   );
 }
 
+/* ─── Intro → App ─── */
 function enterDuel() {
   introActive = false;
   document.getElementById('intro').classList.add('out');
@@ -90,6 +97,7 @@ function enterDuel() {
     wrap.appendChild(d);
   }
 
+  // Patch : vrai logo Unreal
   if (typeof TECH !== 'undefined' && TECH.unreal) {
     TECH.unreal.s = UNREAL_SVG;
   }
@@ -100,7 +108,7 @@ function enterDuel() {
 
 }
 
-/* ─── Grid ─── */
+/* ─── Grille ─── */
 function renderGrid() {
   const g       = document.getElementById('grid');
   const visible = filteredCards();
@@ -132,14 +140,19 @@ function renderGrid() {
     visible.length + ' / ' + CARDS.length + ' card' + (CARDS.length !== 1 ? 's' : '');
 }
 
-/* ─── Selection ─── */
+/* ─── Sélection ─── */
 function pick(i) {
   if (sel === i) return;
   sel = i;
   closePrevVid();
-  showDetail(CARDS[i]);
-  renderGrid();
 
+  if (isMobile()) {
+    renderGrid(); // met la carte en sel (glow)
+    openMobileCard(CARDS[i]);
+  } else {
+    showDetail(CARDS[i]);
+    renderGrid();
+  }
 }
 
 function closePrevVid() {
@@ -157,7 +170,7 @@ function showPh() {
   d.innerHTML = '';
 }
 
-/* ─── Left card detail ─── */
+/* ─── Détail carte gauche ─── */
 function showDetail(c) {
   document.getElementById('ph').style.display = 'none';
   const d = document.getElementById('cd');
@@ -203,7 +216,7 @@ function showDetail(c) {
     ${moreHtml}
     <div class="d-hint"></div>`;
 
-  // Video
+  // Vidéo
   const art = document.getElementById('cfart');
   if (art && hasVid) {
     const v       = art.querySelector('video');
@@ -278,6 +291,103 @@ function closeDet() {
 }
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDet(); });
+
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE 
+═══════════════════════════════════════════════════════════ */
+
+function isMobile() {
+  return window.innerWidth <= 768;
+}
+
+function openMobileCard(c) {
+  const ov    = document.getElementById('mobile-card-ov');
+  const inner = document.getElementById('mobile-card-inner');
+  if (!ov || !inner) return;
+
+  const img     = c.img || blankArt();
+  const name    = escHtml(c.name);
+  const desc    = getDesc(c);
+  const stars   = Array.from({length: c.stars}, () => '<span class="cf-s">★</span>').join('');
+  const hasVid  = !!c.video;
+  const vidHtml = hasVid ? buildVid(c.video) : '';
+  const ghHtml  = c.github
+    ? `<a class="gh-link" href="${c.github}" target="_blank" rel="noopener noreferrer">${GH_SVG}${UI[lang].githubBtn}</a>`
+    : '';
+  const det      = getDet(c);
+  const moreHtml = det
+    ? `<button class="more-btn" onclick="openDet(sel)">${UI[lang].moreBtn}</button>`
+    : '';
+
+  inner.innerHTML = `
+    <div class="dcard" id="mob-dcr">
+      <div class="cframe${c.img ? ' has-img' : ''}">
+        <div class="cface">
+          <div class="cf-hdr">
+            <div class="cf-nm">${name}</div>
+            <div class="cf-st">${stars}</div>
+          </div>
+          <div class="cf-art${hasVid ? ' play' : ''}" id="mob-cfart">
+            <img src="${img}" alt="${name}"/>
+            ${vidHtml}
+            ${hasVid ? '<div class="vid-overlay" id="mob-vid-overlay"></div><div class="vid-pause-icon" id="mob-vid-pause">&#9646;&#9646;</div><button class="vid-fs-btn" id="mob-vid-fs" title="Plein écran">&#x26F6;</button>' : ''}
+          </div>
+          <div class="cf-tp">${escHtml(c.type)}</div>
+          <div class="cf-lr">${escHtml(desc)}</div>
+          <div class="cf-bot">
+            <div class="cf-tech">${techHtml(c.tech)}</div>
+            <span style="white-space:nowrap;font-size:.95rem">ATK/${escHtml(c.atk||'—')} DEF/${escHtml(c.def||'—')}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    ${ghHtml}
+    ${moreHtml}`;
+
+  // Vidéo
+  const art = document.getElementById('mob-cfart');
+  if (art && hasVid) {
+    const v   = art.querySelector('video');
+    const ovl = document.getElementById('mob-vid-overlay');
+    const icn = document.getElementById('mob-vid-pause');
+    const fsb = document.getElementById('mob-vid-fs');
+    if (v) {
+      v.play().catch(() => {});
+      ovl.addEventListener('click', e => {
+        e.stopPropagation();
+        v.paused ? (v.play(), icn.classList.remove('show'))
+                 : (v.pause(), icn.classList.add('show'));
+      });
+    }
+    if (fsb) {
+      fsb.addEventListener('click', e => {
+        e.stopPropagation();
+        if (!document.fullscreenElement) {
+          (v || art).requestFullscreen().catch(() => {});
+        } else {
+          document.exitFullscreen();
+        }
+      });
+    }
+  }
+
+  ov.classList.add('open');
+
+  ov.addEventListener('click', function handler(e) {
+    if (e.target === ov) { closeMobileCard(); ov.removeEventListener('click', handler); }
+  });
+}
+
+function closeMobileCard() {
+  const ov = document.getElementById('mobile-card-ov');
+  if (!ov) return;
+  const v = ov.querySelector('video');
+  if (v) { v.pause(); v.currentTime = 0; }
+  ov.classList.remove('open');
+  sel = null;
+  renderGrid();
+}
 
 /* ─── Init ─── */
 showPh();

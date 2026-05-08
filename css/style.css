@@ -537,3 +537,75 @@ body{
   box-shadow:0 0 14px #c9922a66;
 }
 .tag-btn.active svg{opacity:1}
+
+@media (max-width: 768px) {
+
+  html,body { overflow:hidden; }
+
+
+  #left { display:none; }
+
+
+  #app  { flex-direction:column; }
+  #right{
+    flex:1;width:100%;
+    padding:12px 10px 10px;
+    overflow-y:auto;
+  }
+
+
+  #grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+
+  #tag-filters{ gap:6px;padding:8px 0 2px; }
+  .tag-btn{ padding:5px 10px;font-size:.65rem;gap:4px; }
+  .tag-btn svg{ width:11px;height:11px; }
+
+
+  #about-btn{ width:48px;height:48px;top:12px;left:12px; }
+  #about-btn svg{ width:28px;height:28px; }
+
+
+  #lang-toggle{ bottom:12px;right:12px; }
+
+  #mobile-card-ov{
+    display:none;
+    position:fixed;inset:0;z-index:55;
+    background:#000000cc;
+    backdrop-filter:blur(6px);
+    flex-direction:column;
+    align-items:center;justify-content:center;
+    padding:20px 16px;
+    overflow-y:auto;
+  }
+  #mobile-card-ov.open{ display:flex; }
+
+  #mobile-card-inner{
+    width:100%;max-width:380px;
+    display:flex;flex-direction:column;
+    align-items:center;gap:12px;
+    animation:mPop .35s cubic-bezier(.34,1.56,.64,1);
+  }
+
+  #mobile-close{
+    position:fixed;top:16px;right:16px;z-index:56;
+    width:38px;height:38px;border-radius:50%;
+    background:linear-gradient(135deg,#3a2000,#7a4800);
+    border:1px solid var(--gold);color:var(--gold-l);
+    font-size:1.1rem;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 0 12px #c9922a55;
+  }
+
+  #mobile-card-ov .dcard{ width:min(300px,85vw); }
+
+  #mobile-card-ov .gh-link,
+  #mobile-card-ov .more-btn{
+    width:100%;max-width:300px;
+    justify-content:center;
+    box-sizing:border-box;
+  }
+}
