@@ -263,7 +263,7 @@ function showDetail(c) {
 function buildVid(url) {
   const yt = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([A-Za-z0-9_-]{11})/);
   if (yt) return `<iframe src="https://www.youtube.com/embed/${yt[1]}?autoplay=1&mute=1" style="position:absolute;inset:0;width:100%;height:100%;border:none" allowfullscreen allow="autoplay"></iframe>`;
-  return `<video src="${url}" loop muted playsinline></video>`;
+  return `<video src="${url}" loop muted playsinline webkit-playsinline x5-playsinline></video>`;
 }
 
 function tilt(e, card) {
@@ -361,14 +361,18 @@ function openMobileCard(c) {
       });
     }
     if (fsb) {
-      fsb.addEventListener('click', e => {
-        e.stopPropagation();
-        if (!document.fullscreenElement) {
-          (v || art).requestFullscreen().catch(() => {});
-        } else {
-          document.exitFullscreen();
-        }
-      });
+  fsb.addEventListener('click', e => {
+    e.stopPropagation();
+    if (v) {
+      if (v.webkitEnterFullscreen) {
+        v.webkitEnterFullscreen();
+      } else if (v.requestFullscreen) {
+        v.requestFullscreen().catch(() => {});
+      } else if (v.webkitRequestFullscreen) {
+        v.webkitRequestFullscreen();
+      }
+    }
+  });
     }
   }
 
