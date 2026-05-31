@@ -1,6 +1,78 @@
 const CARDS = [
 
   {
+    name:   "Sun's Arrival 2",
+    type:   "[Gameplay Programmer]",
+    stars:  9,
+    desc: {
+      fr: "Jeu d'horreur inspiré de Five Nights at Freddy's par Scott Cawthon.",
+      en: "Horror game inspired by Five Nights at Freddy's by Scott Cawthon."
+    },
+    img:    "assets/Warehouse.png",
+    video:  "assets/SunArrival2Trailer.mp4",
+    github: "https://github.com/UltiRed8/Sun-s-Arrival-2",
+    tech:   ["unreal","blueprint"],
+    atk:    "4500",
+    def:    "4500",
+    details: {
+      fr: `
+        <p>Une suite à Sun’s Arrival, développée en tant que projet d’équipe complet avec un accent sur l’expansion de l’idée originale dans une expérience d’horreur plus large et plus raffinée. Sun Arrival 2 s’appuie sur le concept central du premier jeu et l’étend considérablement avec une IA améliorée, de nouveaux ennemis, des modes de jeu supplémentaires, et considérablement plus de rejouabilité, d’ambiance et de variété de contenu. Il s’agit toujours d’un jeu d’horreur inspiré par "Five Nights at Freddy’s" de Scott Cawthon. Vous pouvez jouer en solo ou en multijoueur via une connexion IP directe (hôte local ou public). Contrairement au premier jeu, cette version introduit des machines d’arcade entièrement fonctionnelles et plusieurs modes de jeu débloqués après avoir terminé l’expérience principale.</p>
+        <h3>🎯 Ce que j'ai développé</h3>
+        <ul>
+          <li>Implémentation des 3C (Character, Camera, Controls), avec gestion des caméras en vue 1ère et 3ème personne</li>
+          <li>Ajout d’un système de variation du FOV lors du sprint pour améliorer le game feel</li>
+          <li>Développement d’une IA ennemie capable de patrouiller, ouvrir des portes et poursuivre les joueurs et autres</li>
+          <li>Implémentation de mécaniques de furtivité (casiers pour se cacher)</li>
+          <li>Création d’un mini-jeu interactif (mécanique de pression)</li>
+          <li>Intégration des animations du joueur et de l’IA</li>
+          <li>Intégration du système d'intéraction</li>
+          <li>Intégration du multijoueur et réplication d'objets</li>
+        </ul>
+        <h3>📸 Images</h3>
+        <img src="assets/Warehouse.png" alt="Images"/>
+        <img src="assets/PartControl.png" alt="Images"/>
+        <img src="assets/PartRepair.png" alt="Images"/>
+        <img src="assets/BreakRoom.png" alt="Images"/>
+        <h3>🔧 Difficultés rencontrées</h3>
+        <ul>
+          <li>Adaptation des systèmes gameplay (IA, interactions, animations) au contexte multijoueur</li>
+          <li>Synchronisation des états (joueurs, IA, portes, cachettes) entre les différents clients</li>
+          <li>Gestion cohérente des transitions de caméra (1ère / 3ème personne) en réseau</li>
+          <li>Maintien d’un game feel fluide (FOV, déplacements) malgré les contraintes du multijoueur</li>
+          <li>Multijoueur, réplication</li>
+        </ul>
+      `,
+      en: `
+        <p>A sequel to Sun’s Arrival, developed as a full team project with a focus on expanding the original idea into a larger, more polished horror experience.Sun Arrival 2 builds on the core concept of the first game and significantly expands it with improved AI, new enemies, additional game modes, and significantly more replayability, atmosphere, and content variety.This is still a horror game inspired by "Five Nights at Freddy's" by Scott Cawthon. You can play in singleplayer or in multiplayer via direct IP connection (local or public host).Unlike the first game, this version introduces lore, fully functional arcade machines, and multiple game modes unlocked after completing the main experience.</p>
+        <h3>🎯 What I developed</h3>
+        <ul>
+          <li>Implementation of the 3Cs (Character, Camera, Controls), including first-person and third-person camera systems</li>
+          <li>Implementation of dynamic FOV changes during sprint to enhance game feel</li>
+          <li>Development of an enemy AI capable of patrolling, opening doors, and chasing players and other stuff</li>
+          <li>Implementation of stealth mechanics (lockers to hide)</li>
+          <li>Creation of an interactive mini-game (pressure-based mechanic)</li>
+          <li>Integration of player and AI animations</li>
+          <li>Integration of interaction system</li>
+          <li>Integration of multiplayer and replicated objects</li>
+        </ul>
+        <h3>📸 Images</h3>
+        <img src="assets/Warehouse.png" alt="Images"/>
+        <img src="assets/PartControl.png" alt="Images"/>
+        <img src="assets/PartRepair.png" alt="Images"/>
+        <img src="assets/BreakRoom.png" alt="Images"/>
+        <h3>🔧 Challenges faced</h3>
+        <ul>
+          <li>Adapting gameplay systems (AI, interactions, animations) to a multiplayer environment</li>
+          <li>Synchronizing states (players, AI, doors, hiding spots) across clients</li>
+          <li>Handling camera transitions (first-person / third-person) in a networked context</li>
+          <li>Maintaining smooth and responsive game feel (FOV, movement) despite multiplayer constraints</li>
+          <li>Multiplayer, replication</li>
+        </ul>
+      `
+    }
+  },
+
+    {
     name:   "Sun's Arrival",
     type:   "[Gameplay Programmer]",
     stars:  8,
