@@ -271,6 +271,76 @@ const CARDS = [
   },
 
   {
+    name:   "Granny Racing",
+    type:   "[Gameplay Programmer]",
+    stars:  6,
+    desc: {
+      fr: "Jeu de courses multijoueur.",
+      en: "Multiplayer Race Game."
+    },
+    img:    "assets/Granny.png",
+    video:  "",
+    github: "https://github.com/Harull/UE_KartingProject",
+    tech:   ["unreal","cpp"],
+    atk:    "3000",
+    def:    "3000",
+    details: {
+      fr: `
+        <p>Granny Racing est un jeu de course multijoueur développé sous Unreal Engine dans le but d'apprendre les bases du multijoueur et de la réplication réseau. Les joueurs incarnent des grands-mères en compétition pour terminer leurs courses le plus rapidement possible tout en collectant et utilisant différents objets afin de prendre l'avantage sur leurs adversaires.</p>
+        <h3>🎯 Ce que j'ai développé</h3>
+        <ul>
+          <li>Développement d’un système d’inventaire</li>
+          <li>Implémentation de différents objets utilisables en course</li>
+          <li>Création de l’interface utilisateur dédiée à la gestion des objets</li>
+          <li>Gestion de la réplication des objets et de leurs interactions en réseau</li>
+          <li>Intégration de plusieurs effets visuels (FX) à l’aide de Niagara et de ressources pédagogiques</li>
+          <li>Participation à l’apprentissage et à l’implémentation des mécaniques multijoueurs sous Unreal Engine</li>
+        </ul>
+        <h3>📸 Images</h3>
+        <img src="assets/Granny.png" alt="Images"/>
+	<img src="assets/GrannyAlley.png" alt="Images"/>
+	<img src="assets/GrannyFinish.png" alt="Images"/>
+	<img src="assets/GrannyLobby.png" alt="Images"/>
+	<img src="assets/GrannyLobby2.png" alt="Images"/>
+	<img src="assets/GrannyRace.png" alt="Images"/>
+        <h3>🔧 Difficultés rencontrées</h3>
+      <ul>
+          <li>Compréhension du fonctionnement du modèle client/serveur d’Unreal Engine</li>
+          <li>Gestion de la réplication des objets afin d’assurer un comportement cohérent entre tous les joueurs</li>
+          <li>Débogage des problèmes liés au réseau et aux états désynchronisés</li>
+          <li>Intégration des effets visuels tout en conservant leur cohérence sur les différents clients</li>
+      </ul>
+      `,
+      en: `
+        <p>Granny Racing is a multiplayer racing game developed with Unreal Engine as a learning project focused on multiplayer networking and replication. Players take on the role of grandmothers competing to finish their shopping run as quickly as possible while collecting and using various items to gain an advantage over their opponents.</p>
+        <h3>🎯 What I developed</h3>
+        <ul>
+          <li>Development of a inventory system</li>
+          <li>Implementation of various usable race items</li>
+          <li>Creation of a dedicated item management user interface</li>
+          <li>Handling item replication and networked interactions</li>
+          <li>Integration of multiple visual effects (VFX) using Niagara and online learning resources</li>
+          <li>Practical implementation of multiplayer mechanics within Unreal Engine</li>
+      </ul>
+        <h3>📸 Images</h3>
+        <img src="assets/Granny.png" alt="Images"/>
+	<img src="assets/GrannyAlley.png" alt="Images"/>
+	<img src="assets/GrannyFinish.png" alt="Images"/>
+	<img src="assets/GrannyLobby.png" alt="Images"/>
+	<img src="assets/GrannyLobby2.png" alt="Images"/>
+	<img src="assets/GrannyRace.png" alt="Images"/>
+        <h3>🔧 Challenges faced</h3>
+      <ul>
+          <li>Understanding Unreal Engine's client-server architecture</li>
+          <li>Managing item replication to ensure consistent behavior across all players</li>
+          <li>Debugging networking issues and desynchronized states</li>
+          <li>Integrating visual effects while maintaining consistency across clients</li>
+      </ul>
+      `
+    }
+  },
+
+  {
     name:   "Game GeoGuessor",
     type:   "[Python / Game]",
     stars:  5,
